@@ -1,0 +1,9 @@
+parameters:
+    ezstudio.installer.studio_installer.class: EzSystems\StudioInstallerBundle\Installer\StudioInstaller
+
+services:
+    ezstudio.installer.studio_installer:
+        class: %ezstudio.installer.studio_installer.class%
+        parent: ezplatform.installer.clean_installer
+        tags:
+            - {name: ezplatform.installer, type: studio-clean}
