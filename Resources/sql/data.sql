@@ -6,7 +6,7 @@ INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',13,NULL,NULL,NULL,NUL
 INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',13,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ezstring',186,'description',0,0,1,20,'N;','a:1:{s:6:\"eng-GB\";s:24:\"Landing page description\";}','a:1:{s:6:\"eng-GB\";s:11:\"Description\";}',0);
 INSERT INTO `ezcontentclass_attribute` VALUES (0,'content',13,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ezlandingpage',187,'page',0,1,0,30,'N;','a:1:{s:6:\"eng-GB\";s:12:\"Landing page\";}','a:1:{s:6:\"eng-GB\";s:12:\"Landing page\";}',0);
 
-INSERT INTO `ezcontentclass_classgroup` VALUES (14,0,1,'Content');
+INSERT INTO `ezcontentclass_classgroup` VALUES (13,0,1,'Content');
 
 INSERT INTO `ezcontentclass_name` VALUES (42,0,2,'eng-GB','Landing page');
 
