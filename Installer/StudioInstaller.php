@@ -9,10 +9,18 @@ use EzSystems\PlatformInstallerBundle\Installer\CleanInstaller;
 
 class StudioInstaller extends CleanInstaller
 {
+
+    public function importSchema()
+    {
+        parent::importSchema();
+
+        $this->runQueriesFromFile(__DIR__.'/../Resources/sql/schema.sql');
+    }
+
     public function importData()
     {
         parent::importData();
 
-        $this->runQueriesFromFile(__DIR__.'/../Resources/sql/data.sql');
+        $this->runQueriesFromFile(__DIR__.'/../Resources/sql/cleandata.sql');
     }
 }
