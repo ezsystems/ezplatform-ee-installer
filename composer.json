@@ -1,0 +1,24 @@
+{
+  "name": "ezsystems/ezstudio-installer",
+  "description": "Installer for eZ Studio",
+  "license": "TTL-2.0",
+  "authors": [
+    {
+      "name": "eZ Studio dev-team",
+      "homepage": "https://github.com/ezsystems/ezstudio-installer/graphs/contributors"
+    }
+  ],
+  "require": {
+    "ezsystems/ezpublish-kernel": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "EzSystems\\StudioInstallerBundle\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
