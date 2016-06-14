@@ -19,3 +19,21 @@ INSERT INTO `ezcontentobject_name` VALUES ('eng-GB',1,52,2,'Home','eng-GB');
 INSERT INTO `ezcontentobject_version` VALUES (52,1442481742,14,512,2,3,1442481743,1,0,1,0);
 
 UPDATE `ezcontentobject_tree` SET contentobject_id=52, contentobject_version=1, path_identification_string='', remote_id='f3e90596361e31d496d4026eb624c983' WHERE path_string='/1/2/';
+
+TRUNCATE TABLE `ezrole`;
+TRUNCATE TABLE `ezpolicy`;
+TRUNCATE TABLE `ezpolicy_limitation`;
+TRUNCATE TABLE `ezpolicy_limitation_value`;
+
+INSERT INTO `ezrole` (`id`, `is_new`, `name`, `value`, `version`) VALUES (1,0,'Anonymous','',0);
+INSERT INTO `ezrole` (`id`, `is_new`, `name`, `value`, `version`) VALUES (2,0,'Administrator','0',0);
+
+INSERT INTO `ezpolicy` (`function_name`, `id`, `module_name`, `original_id`, `role_id`) VALUES ('read',1,'content',0,1);
+INSERT INTO `ezpolicy` (`function_name`, `id`, `module_name`, `original_id`, `role_id`) VALUES ('login',2,'user',0,1);
+INSERT INTO `ezpolicy` (`function_name`, `id`, `module_name`, `original_id`, `role_id`) VALUES ('*',3,'*',0,2);
+
+INSERT INTO `ezpolicy_limitation` (`id`, `identifier`, `policy_id`) VALUES (1,'Section',1);
+INSERT INTO `ezpolicy_limitation` (`id`, `identifier`, `policy_id`) VALUES (2,'SiteAccess',2);
+
+INSERT INTO `ezpolicy_limitation_value` (`id`, `limitation_id`, `value`) VALUES (1,1,'1');
+INSERT INTO `ezpolicy_limitation_value` (`id`, `limitation_id`, `value`) VALUES (2,2,'1766001124');
