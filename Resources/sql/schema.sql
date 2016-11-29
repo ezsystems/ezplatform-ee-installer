@@ -44,3 +44,47 @@ CREATE TABLE `eznotification` (
   KEY `owner_id` (`owner_id`),
   KEY `is_pending` (`is_pending`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ezformbuilder_form`;
+CREATE TABLE `ezformbuilder_form` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `created` int(11) NOT NULL,
+  `updated` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `description` longtext,
+  `submit_text` varchar(64) NOT NULL,
+  `redirect_type` int(11) NOT NULL,
+  `redirect_url` varchar(255) DEFAULT NULL,
+  `redirect_location` varchar(255) DEFAULT NULL,
+  `thankyou_text` longtext,
+  `callback_url` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `email_cc` longtext,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ezformbuilder_form_version`;
+CREATE TABLE `ezformbuilder_form_version` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `form_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `checksum` varchar(255) NOT NULL,
+  `structure` longtext NOT NULL,
+  `created` int(11) NOT NULL,
+  `updated` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ezformbuilder_form_submission`;
+CREATE TABLE `ezformbuilder_form_submission` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `form_id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `fields` longtext NOT NULL,
+  `created` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
