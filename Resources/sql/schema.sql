@@ -88,3 +88,16 @@ CREATE TABLE `ezformbuilder_form_submission` (
   `created` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `datebasedpublisher_scheduled_version` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content_id` int(11) NOT NULL,
+  `version_id` int(11) NOT NULL,
+  `version_number` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `publication_date` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `index4` (`content_id`,`version_number`),
+  KEY `index2` (`content_id`),
+  KEY `index3` (`version_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
