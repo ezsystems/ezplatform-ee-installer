@@ -89,6 +89,7 @@ CREATE TABLE `ezformbuilder_form_submission` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `datebasedpublisher_scheduled_version`;
 CREATE TABLE `datebasedpublisher_scheduled_version` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content_id` int(11) NOT NULL,
