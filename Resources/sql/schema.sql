@@ -57,10 +57,10 @@ CREATE TABLE `ezformbuilder_form` (
   `description` longtext,
   `submit_text` varchar(64) NOT NULL,
   `redirect_type` int(11) NOT NULL,
-  `redirect_url` varchar(255) DEFAULT NULL,
+  `redirect_url` longtext DEFAULT NULL,
   `redirect_location` varchar(255) DEFAULT NULL,
   `thankyou_text` longtext,
-  `callback_url` varchar(255) DEFAULT NULL,
+  `callback_url` longtext DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `email_cc` longtext,
   PRIMARY KEY (`id`)
@@ -86,6 +86,8 @@ CREATE TABLE `ezformbuilder_form_submission` (
   `version` int(11) NOT NULL,
   `fields` longtext NOT NULL,
   `created` int(11) NOT NULL,
+  `updated` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
