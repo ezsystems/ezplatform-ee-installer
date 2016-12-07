@@ -99,6 +99,7 @@ CREATE TABLE `datebasedpublisher_scheduled_version` (
   `version_number` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `publication_date` int(11) NOT NULL,
+  `url_root` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `index4` (`content_id`,`version_number`),
   KEY `index2` (`content_id`),
