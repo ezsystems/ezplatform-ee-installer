@@ -58,7 +58,7 @@ CREATE TABLE `ezformbuilder_form` (
   `submit_text` varchar(64) NOT NULL,
   `redirect_type` int(11) NOT NULL,
   `redirect_url` longtext DEFAULT NULL,
-  `redirect_location` varchar(255) DEFAULT NULL,
+  `redirect_content` int(11) DEFAULT NULL,
   `thankyou_text` longtext,
   `callback_url` longtext DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
