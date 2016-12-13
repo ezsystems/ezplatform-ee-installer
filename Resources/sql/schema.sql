@@ -105,8 +105,8 @@ CREATE TABLE `ezformbuilder_form_content_relation` (
   KEY `form_id` (`form_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `datebasedpublisher_scheduled_version`;
-CREATE TABLE `datebasedpublisher_scheduled_version` (
+DROP TABLE IF EXISTS `ezdatebasedpublisher_scheduled_version`;
+CREATE TABLE `ezdatebasedpublisher_scheduled_version` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content_id` int(11) NOT NULL,
   `version_id` int(11) NOT NULL,
