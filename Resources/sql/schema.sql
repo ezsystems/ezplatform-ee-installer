@@ -91,6 +91,20 @@ CREATE TABLE `ezformbuilder_form_submission` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `ezformbuilder_form_content_relation`;
+CREATE TABLE `ezformbuilder_form_content_relation` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `content_id` int(11) NOT NULL,
+  `block_id` varchar(64) NOT NULL,
+  `form_id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `content_id_2` (`content_id`,`version`,`block_id`),
+  KEY `content_id` (`content_id`),
+  KEY `block_id` (`block_id`),
+  KEY `form_id` (`form_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 DROP TABLE IF EXISTS `datebasedpublisher_scheduled_version`;
 CREATE TABLE `datebasedpublisher_scheduled_version` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
