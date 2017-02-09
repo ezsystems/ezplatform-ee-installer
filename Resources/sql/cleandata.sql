@@ -9,15 +9,46 @@ INSERT INTO `ezcontentclass_classgroup` VALUES (42,0,1,'Content');
 INSERT INTO `ezcontentclass_name` VALUES (42,0,2,'eng-GB','Landing page');
 
 INSERT INTO `ezcontentobject` VALUES (42,1,52,2,3,1442481743,'Home',14,1442481743,'34720ff636e1d4ce512f762dc638e4ac',1,1);
+INSERT INTO `ezcontentobject` VALUES (1,1,53,2,3,1486473151,'Form Uploads',14,1486473151,'6797ab09a3e84316f09c4ccabce90e2d',3,1);
 
 INSERT INTO `ezcontentobject_attribute` VALUES (0,185,52,NULL,NULL,'Home','ezstring',242,'eng-GB',3,0,'home',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,186,52,NULL,NULL,'Home Page','ezstring',243,'eng-GB',3,0,'home page',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,187,52,NULL,NULL,'<?xml version="1.0" encoding="UTF-8"?><page title="Home" layout="default"><zones><zone id="0" name="default"><blocks><block id="b-fbe4877d-eafe-e650-2f03-58db9bf2df06" type="tag" view="default" name="Tag" ttl="0"><attributes><attribute name="content">&lt;h1&gt;eZ Studio&lt;/h1&gt; &lt;p&gt;This is the clean install coming with eZ Studio. Now you can start creating your own design.&lt;/p&gt;</attribute></attributes></block></blocks></zone></zones></page>','ezlandingpage',244,'eng-GB',3,0,'home page',1);
+INSERT INTO `ezcontentobject_attribute` VALUES (0,4,53,NULL,NULL,'Form Uploads','ezstring',245,'eng-GB',3,0,'form uploads',1);
+INSERT INTO `ezcontentobject_attribute` VALUES (0,155,53,NULL,NULL,'form uploads','ezstring',246,'eng-GB',3,0,'form uploads',1);
+INSERT INTO `ezcontentobject_attribute` VALUES (0,119,53,NULL,NULL,'<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Folder for file uploads</para></section>\n','ezrichtext',247,'eng-GB',3,0,'',1);
+INSERT INTO `ezcontentobject_attribute` VALUES (0,156,53,NULL,NULL,'<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n','ezrichtext',248,'eng-GB',3,0,'',1);
 
 INSERT INTO `ezcontentobject_name` VALUES ('eng-GB',1,52,2,'Home','eng-GB');
+INSERT INTO `ezcontentobject_name` VALUES ('eng-GB',1,53,2,'Form Uploads','eng-GB');
 
 INSERT INTO `ezcontentobject_version` VALUES (52,1442481742,14,512,2,3,1442481743,1,0,1,0);
+INSERT INTO `ezcontentobject_version` VALUES (53,1486473143,14,513,2,3,1486473151,1,0,1,0);
 
 INSERT INTO `ezcobj_state_link` VALUES (52,1);
+INSERT INTO `ezcobj_state_link` VALUES (53,1);
+
+INSERT INTO `eznode_assignment` VALUES (53,1,0,40,1,2,52,'0543630fa051a1e2be54dbd32da2420f','0',1,1,0,0);
+
+INSERT INTO `ezsearch_object_word_link` VALUES (4,1,53,0,4699,'name',0,970,0,0,1486473151,3,969);
+INSERT INTO `ezsearch_object_word_link` VALUES (4,1,53,0,4700,'name',0,969,1,969,1486473151,3,970);
+INSERT INTO `ezsearch_object_word_link` VALUES (155,1,53,0,4701,'short_name',0,970,2,970,1486473151,3,969);
+INSERT INTO `ezsearch_object_word_link` VALUES (155,1,53,0,4702,'short_name',0,971,3,969,1486473151,3,970);
+INSERT INTO `ezsearch_object_word_link` VALUES (119,1,53,0,4703,'short_description',0,816,4,970,1486473151,3,971);
+INSERT INTO `ezsearch_object_word_link` VALUES (119,1,53,0,4704,'short_description',0,972,5,971,1486473151,3,816);
+INSERT INTO `ezsearch_object_word_link` VALUES (119,1,53,0,4705,'short_description',0,970,6,816,1486473151,3,972);
+INSERT INTO `ezsearch_object_word_link` VALUES (119,1,53,0,4706,'short_description',0,0,7,972,1486473151,3,970);
+
+INSERT INTO `ezsearch_word` VALUES (969,1,'form');
+INSERT INTO `ezsearch_word` VALUES (970,1,'uploads');
+INSERT INTO `ezsearch_word` VALUES (971,1,'folder');
+INSERT INTO `ezsearch_word` VALUES (972,1,'file');
+
+INSERT INTO `ezsection` VALUES (6,'form',NULL,'Form','ezcontentnavigationpart');
+
+INSERT INTO `ezurlalias_ml` VALUES ('eznode:54','eznode',0,38,0,1,3,38,19,'form-uploads','2c5f0c4eb6b8ba8d176b87665bdbe1af');
+
+INSERT INTO `ezurlalias_ml_incr` VALUES (38);
 
 UPDATE `ezcontentobject_tree` SET contentobject_id=52, contentobject_version=1, path_identification_string='', remote_id='f3e90596361e31d496d4026eb624c983' WHERE path_string='/1/2/';
+INSERT INTO `ezcontentobject_tree` VALUES (53,1,1,3,0,0,54,1486473151,54,52,'media/files/form_uploads','/1/43/52/54/',0,'0543630fa051a1e2be54dbd32da2420f',1,1);
