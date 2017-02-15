@@ -9,7 +9,6 @@
     }
   ],
   "require": {
-
     "ezsystems/ezpublish-kernel": "^7.0"
   },
   "autoload": {
