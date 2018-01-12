@@ -21,3 +21,5 @@ INSERT INTO `ezcontentobject_version` VALUES (52,1442481742,14,512,2,3,144248174
 INSERT INTO `ezcobj_state_link` VALUES (52,1);
 
 UPDATE `ezcontentobject_tree` SET contentobject_id=52, contentobject_version=1, path_identification_string='', remote_id='f3e90596361e31d496d4026eb624c983' WHERE path_string='/1/2/';
+
+INSERT INTO `ezpolicy_limitation_value` (`id`, `limitation_id`, `value`) VALUES (482,251,'3');
