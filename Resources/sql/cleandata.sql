@@ -53,4 +53,7 @@ INSERT INTO `ezurlalias_ml_incr` VALUES (38);
 UPDATE `ezcontentobject_tree` SET contentobject_id=52, contentobject_version=1, path_identification_string='', remote_id='f3e90596361e31d496d4026eb624c983' WHERE path_string='/1/2/';
 INSERT INTO `ezcontentobject_tree` VALUES (53,1,1,3,0,0,54,1486473151,54,52,'media/files/form_uploads','/1/43/52/54/',0,'0543630fa051a1e2be54dbd32da2420f',1,1);
 
+-- adds location for 'eZ Platform' which was previously detached
+INSERT INTO `ezcontentobject_tree` (`contentobject_id`, `contentobject_is_published`, `contentobject_version`, `depth`, `is_hidden`, `is_invisible`, `main_node_id`, `modified_subnode`, `node_id`, `parent_node_id`, `path_identification_string`, `path_string`, `priority`, `remote_id`, `sort_field`, `sort_order`) VALUES (1,1,9,1,0,0,3,1301073466,3,1,'node_3','/1/3/',0,'80a0766c8c1169fc9f9560bcaa51c1ed',8,1);
+
 INSERT INTO `ezpolicy_limitation_value` (`id`, `limitation_id`, `value`) VALUES (482,251,'3');
