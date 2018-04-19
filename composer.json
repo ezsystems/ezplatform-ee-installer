@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "ezsystems/ezpublish-kernel": "^6.7"
+    "ezsystems/ezpublish-kernel": "^6.8"
   },
   "autoload": {
     "psr-4": {
@@ -18,7 +18,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "1.4.x-dev"
+      "dev-master": "1.5.x-dev"
     }
   }
 }
