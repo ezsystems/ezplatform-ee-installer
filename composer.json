@@ -1,7 +1,7 @@
 {
   "name": "ezsystems/ezstudio-installer",
   "description": "Installer for eZ Studio",
-  "license": "TTL-2.0",
+  "license": "proprietary",
   "authors": [
     {
       "name": "eZ Studio dev-team",
