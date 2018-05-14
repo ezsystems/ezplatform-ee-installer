@@ -13,7 +13,7 @@ INSERT INTO `ezcontentobject` VALUES (1,1,53,2,3,1486473151,'Form Uploads',14,14
 
 INSERT INTO `ezcontentobject_attribute` VALUES (0,185,52,NULL,NULL,'Home','ezstring',242,'eng-GB',3,0,'home',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,186,52,NULL,NULL,'Home Page','ezstring',243,'eng-GB',3,0,'home page',1);
-INSERT INTO `ezcontentobject_attribute` VALUES (0,187,52,NULL,NULL,'<?xml version="1.0" encoding="UTF-8"?><page title="Home" layout="default"><zones><zone id="0" name="default"><blocks><block id="b-fbe4877d-eafe-e650-2f03-58db9bf2df06" type="tag" view="default" name="Tag" ttl="0"><attributes><attribute name="content">&lt;h1&gt;eZ Studio&lt;/h1&gt; &lt;p&gt;This is the clean install coming with eZ Studio. Now you can start creating your own design.&lt;/p&gt;</attribute></attributes></block></blocks></zone></zones></page>','ezlandingpage',244,'eng-GB',3,0,'home page',1);
+INSERT INTO `ezcontentobject_attribute` VALUES (0,187,52,NULL,NULL,NULL,'ezlandingpage',244,'eng-GB',3,0,'home page',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,4,53,NULL,NULL,'Form Uploads','ezstring',245,'eng-GB',3,0,'form uploads',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,155,53,NULL,NULL,'form uploads','ezstring',246,'eng-GB',3,0,'form uploads',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,119,53,NULL,NULL,'<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Folder for file uploads</para></section>\n','ezrichtext',247,'eng-GB',3,0,'',1);
@@ -56,3 +56,26 @@ INSERT INTO `ezcontentobject_tree` VALUES (1,1,1,2,0,0,42,1486473151,42,2,'home'
 INSERT INTO `ezcontentobject_tree` VALUES (53,1,1,3,0,0,54,1486473151,54,52,'media/files/form_uploads','/1/43/52/54/',0,'0543630fa051a1e2be54dbd32da2420f',1,1);
 
 INSERT INTO `ezpolicy_limitation_value` VALUES (482,251,'3');
+
+-- Page for Home
+
+INSERT INTO `ezpage_attributes` (`id`, `name`, `value`)
+VALUES (1,'content','<h1>eZ Studio</h1> <p>This is the clean install coming with eZ Studio. Now you can start creating your own design.</p>');
+
+INSERT INTO `ezpage_blocks` (`id`, `type`, `view`, `name`)
+VALUES (1,'tag','default','Tag');
+
+INSERT INTO `ezpage_map_attributes_blocks` (`attribute_id`, `block_id`)
+VALUES (1,1);
+
+INSERT INTO `ezpage_map_blocks_zones` (`block_id`, `zone_id`)
+VALUES (1,1);
+
+INSERT INTO `ezpage_map_zones_pages` (`zone_id`, `page_id`)
+VALUES (1,1);
+
+INSERT INTO `ezpage_pages` (`id`, `version_no`, `content_id`, `language_code`, `layout`)
+VALUES (1,1,52,'eng-GB','default');
+
+INSERT INTO `ezpage_zones` (`id`, `name`)
+VALUES (1,'default');
