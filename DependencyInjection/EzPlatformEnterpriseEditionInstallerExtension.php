@@ -3,14 +3,14 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace EzSystems\StudioInstallerBundle\DependencyInjection;
+namespace EzSystems\EzPlatformEnterpriseEditionInstallerBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
-class EzSystemsStudioInstallerExtension extends Extension
+class EzPlatformEnterpriseEditionInstallerExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {

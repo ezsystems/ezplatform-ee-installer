@@ -1,19 +1,19 @@
 {
-  "name": "ezsystems/ezstudio-installer",
-  "description": "Installer for eZ Studio",
+  "name": "ezsystems/ezplatform-ee-installer",
+  "description": "Installer for eZ Platform Enterprise Edition",
   "license": "proprietary",
   "authors": [
     {
-      "name": "eZ Studio dev-team",
-      "homepage": "https://github.com/ezsystems/ezstudio-installer/graphs/contributors"
+      "name": "eZ Platform dev-team",
+      "homepage": "https://github.com/ezsystems/ezplatform-ee-installer/graphs/contributors"
     }
   ],
   "require": {
-    "ezsystems/ezpublish-kernel": "^7.0"
+    "ezsystems/ezpublish-kernel": "^7.1"
   },
   "autoload": {
     "psr-4": {
-      "EzSystems\\StudioInstallerBundle\\": ""
+      "EzSystems\\EzPlatformEnterpriseEditionInstallerBundle\\": ""
     }
   },
   "extra": {

@@ -1,1 +1,1 @@
-# ezstudio-installer
+# ezsystems/ezplatform-ee-installer
