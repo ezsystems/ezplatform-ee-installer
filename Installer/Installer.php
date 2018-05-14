@@ -3,11 +3,11 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace EzSystems\StudioInstallerBundle\Installer;
+namespace EzSystems\EzPlatformEnterpriseEditionInstallerBundle\Installer;
 
 use EzSystems\PlatformInstallerBundle\Installer\CleanInstaller;
 
-class StudioInstaller extends CleanInstaller
+class Installer extends CleanInstaller
 {
 
     public function importSchema()
