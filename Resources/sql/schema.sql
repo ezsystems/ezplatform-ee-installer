@@ -158,7 +158,7 @@ CREATE TABLE `ezpage_blocks` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `ezpage_blocks_design`;
-CREATE TABLE `platform`.`ezpage_blocks_design` (
+CREATE TABLE `ezpage_blocks_design` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `block_id` INT(11) NOT NULL,
   `style` TEXT DEFAULT NULL,
@@ -167,7 +167,7 @@ CREATE TABLE `platform`.`ezpage_blocks_design` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `ezpage_blocks_visibility`;
-CREATE TABLE `platform`.`ezpage_blocks_visibility` (
+CREATE TABLE `ezpage_blocks_visibility` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `block_id` INT(11) NOT NULL,
   `since` DATETIME DEFAULT NULL,
