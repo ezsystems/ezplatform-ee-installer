@@ -154,10 +154,26 @@ CREATE TABLE `ezpage_blocks` (
   `type` varchar(255) NOT NULL DEFAULT '',
   `view` varchar(255) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT '',
-  `class` varchar(255) DEFAULT NULL,
-  `style` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ezpage_blocks_design`;
+CREATE TABLE `platform`.`ezpage_blocks_design` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `block_id` INT(11) NOT NULL,
+  `style` TEXT DEFAULT NULL,
+  `class` VARCHAR(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ezpage_blocks_visibility`;
+CREATE TABLE `platform`.`ezpage_blocks_visibility` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `block_id` INT(11) NOT NULL,
+  `since` DATETIME DEFAULT NULL,
+  `till` DATETIME DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `ezpage_map_attributes_blocks`;
 CREATE TABLE `ezpage_map_attributes_blocks` (
