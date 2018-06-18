@@ -162,6 +162,7 @@ CREATE TABLE `ezpage_blocks_design` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `block_id` INT(11) NOT NULL,
   `style` TEXT DEFAULT NULL,
+  `compiled` TEXT DEFAULT NULL,
   `class` VARCHAR(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
