@@ -50,9 +50,9 @@ CREATE TABLE `ezdatebasedpublisher_scheduled_version` (
   `publication_date` int(11) NOT NULL,
   `url_root` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `index4` (`content_id`,`version_number`),
-  KEY `index2` (`content_id`),
-  KEY `index3` (`version_id`)
+  UNIQUE KEY `content_id_version_number` (`content_id`,`version_number`),
+  KEY `content_id` (`content_id`),
+  KEY `version_id` (`version_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -74,7 +74,7 @@ CREATE TABLE `ezpage_blocks` (
   `view` varchar(255) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_blocks_design`;
 CREATE TABLE `ezpage_blocks_design` (
@@ -84,7 +84,7 @@ CREATE TABLE `ezpage_blocks_design` (
   `compiled` TEXT DEFAULT NULL,
   `class` VARCHAR(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_blocks_visibility`;
 CREATE TABLE `ezpage_blocks_visibility` (
@@ -93,7 +93,7 @@ CREATE TABLE `ezpage_blocks_visibility` (
   `since` INT(11) DEFAULT NULL,
   `till` INT(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_map_attributes_blocks`;
 CREATE TABLE `ezpage_map_attributes_blocks` (
