@@ -1,11 +1,11 @@
 INSERT INTO `ezcontentclass` VALUES (1,'<name>',1435924826,14,42,'landing_page',2,1,2,1435924826,14,'60c03e9758465eb69d56b3afb6adf18e','a:1:{s:6:\"eng-GB\";s:0:\"\";}','a:1:{s:6:\"eng-GB\";s:12:\"Landing page\";}',2,0,'',0);
-INSERT INTO `ezcontentclass` VALUES ('1', '<title>', '1537166773', '14', '43', 'form', '2', '0', '2', '1537166834', '14', '6f7f21df775a33c1e4bbc76b48c38476', 'a:0:{}', 'a:1:{s:6:\"eng-GB\";s:4:\"Form\";}', '2', '0', '', '0');
+INSERT INTO `ezcontentclass` VALUES (1,'<title>',1537166773,14,43,'form',2,0,2,1537166834,14,'6f7f21df775a33c1e4bbc76b48c38476','a:0:{}','a:1:{s:6:\"eng-GB\";s:4:\"Form\";}',2,0,'',0);
 
 INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',42,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ezstring',185,'name',0,1,1,10,'N;','a:1:{s:6:\"eng-GB\";s:5:\"Title\";}','a:1:{s:6:\"eng-GB\";s:5:\"Title\";}',0);
 INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',42,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ezstring',186,'description',0,1,1,20,'N;','a:1:{s:6:\"eng-GB\";s:24:\"Landing page description\";}','a:1:{s:6:\"eng-GB\";s:11:\"Description\";}',0);
 INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',42,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ezlandingpage',187,'page',0,0,0,30,'N;','a:1:{s:6:\"eng-GB\";s:12:\"Landing page\";}','a:1:{s:6:\"eng-GB\";s:12:\"Landing page\";}',0);
-INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',43,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ezform',189,'form',0,0,0,2,'N;', 'a:0:{}','a:1:{s:6:\"eng-GB\";s:4:\"Form\";}',0);
-INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',43,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL, NULL, 'ezstring', '188', 'title', '0', '1', '1', '1', 'N;', 'a:0:{}', 'a:1:{s:6:\"eng-GB\";s:5:\"Title\";}', '0');
+INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',43,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ezform',189,'form',0,0,0,2,'N;','a:0:{}','a:1:{s:6:\"eng-GB\";s:4:\"Form\";}',0);
+INSERT INTO `ezcontentclass_attribute` VALUES (1,'content',43,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ezstring',188,'title',0,1,1,1,'N;','a:0:{}','a:1:{s:6:\"eng-GB\";s:5:\"Title\";}',0);
 
 INSERT INTO `ezcontentclass_classgroup` VALUES (42,0,1,'Content');
 INSERT INTO `ezcontentclass_classgroup` VALUES (43,0,1,'Content');
@@ -15,7 +15,7 @@ INSERT INTO `ezcontentclass_name` VALUES (43,0,2,'eng-GB','Form');
 
 INSERT INTO `ezcontentobject` VALUES (42,1,52,2,3,1442481743,'Home',14,1442481743,'34720ff636e1d4ce512f762dc638e4ac',1,1);
 INSERT INTO `ezcontentobject` VALUES (1,1,53,2,3,1486473151,'Form Uploads',14,1486473151,'6797ab09a3e84316f09c4ccabce90e2d',3,1);
-INSERT INTO `ezcontentobject` VALUES (1, 1, 54, 2, 2,1537166893,'Forms',14,1537166893,'9e863fbb0fb835ce050032b4f00de61d',1,1);
+INSERT INTO `ezcontentobject` VALUES (1,1,54,2,2,1537166893,'Forms',14,1537166893,'9e863fbb0fb835ce050032b4f00de61d',1,1);
 
 INSERT INTO `ezcontentobject_attribute` VALUES (0,185,52,NULL,NULL,'Home','ezstring',242,'eng-GB',3,0,'home',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,186,52,NULL,NULL,'Home Page','ezstring',243,'eng-GB',3,0,'home page',1);
@@ -52,7 +52,7 @@ INSERT INTO `ezsearch_object_word_link` VALUES (119,1,53,0,4703,'short_descripti
 INSERT INTO `ezsearch_object_word_link` VALUES (119,1,53,0,4704,'short_description',0,972,5,971,1486473151,3,816);
 INSERT INTO `ezsearch_object_word_link` VALUES (119,1,53,0,4705,'short_description',0,970,6,816,1486473151,3,972);
 INSERT INTO `ezsearch_object_word_link` VALUES (119,1,53,0,4706,'short_description',0,0,7,972,1486473151,3,970);
-INSERT INTO `ezsearch_object_word_link` VALUES ('4', '1', '54', '0', '4899', 'name', '0', '0', '0', '0', '1537166893', '1', '1082');
+INSERT INTO `ezsearch_object_word_link` VALUES (4,1,54,0,4899,'name',0,0,0,0,1537166893,1,1082);
 
 INSERT INTO `ezsearch_word` VALUES (969,1,'form');
 INSERT INTO `ezsearch_word` VALUES (970,1,'uploads');
