@@ -144,7 +144,7 @@ CREATE TABLE `ezform_forms` (
   `content_field_id` int(11) DEFAULT NULL,
   `language_code` varchar(16) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezform_fields`;
 CREATE TABLE `ezform_fields` (
@@ -153,7 +153,7 @@ CREATE TABLE `ezform_fields` (
   `name` VARCHAR(128) NOT NULL,
   `identifier` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezform_field_attributes`;
 CREATE TABLE `ezform_field_attributes` (
@@ -162,7 +162,7 @@ CREATE TABLE `ezform_field_attributes` (
   `identifier` varchar(128) DEFAULT NULL,
   `value` blob,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezform_field_validators`;
 CREATE TABLE `ezform_field_validators` (
@@ -171,7 +171,7 @@ CREATE TABLE `ezform_field_validators` (
   `identifier` varchar(128) DEFAULT NULL,
   `value` blob,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezform_form_submissions`;
 CREATE TABLE `ezform_form_submissions` (
@@ -181,7 +181,7 @@ CREATE TABLE `ezform_form_submissions` (
   `user_id` INT NOT NULL,
   `created` INT NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezform_form_submission_data`;
 CREATE TABLE `ezform_form_submission_data` (
@@ -191,4 +191,4 @@ CREATE TABLE `ezform_form_submission_data` (
   `identifier` VARCHAR(128) NOT NULL,
   `value` BLOB NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
