@@ -131,3 +131,64 @@ CREATE TABLE `ezpage_zones` (
   `name` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Form Builder
+--
+
+DROP TABLE IF EXISTS `ezform_forms`;
+CREATE TABLE `ezform_forms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content_id` int(11) DEFAULT NULL,
+  `version_no` int(11) DEFAULT NULL,
+  `content_field_id` int(11) DEFAULT NULL,
+  `language_code` varchar(16) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS `ezform_fields`;
+CREATE TABLE `ezform_fields` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `form_id` int(11) DEFAULT NULL,
+  `name` VARCHAR(128) NOT NULL,
+  `identifier` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS `ezform_field_attributes`;
+CREATE TABLE `ezform_field_attributes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `field_id` int(11) DEFAULT NULL,
+  `identifier` varchar(128) DEFAULT NULL,
+  `value` blob,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS `ezform_field_validators`;
+CREATE TABLE `ezform_field_validators` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `field_id` int(11) DEFAULT NULL,
+  `identifier` varchar(128) DEFAULT NULL,
+  `value` blob,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS `ezform_form_submissions`;
+CREATE TABLE `ezform_form_submissions` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `content_id` INT NOT NULL,
+  `language_code` VARCHAR(6) NOT NULL,
+  `user_id` INT NOT NULL,
+  `created` INT NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS `ezform_form_submission_data`;
+CREATE TABLE `ezform_form_submission_data` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `form_submission_id` INT NOT NULL,
+  `name` VARCHAR(128) NOT NULL,
+  `identifier` VARCHAR(128) NOT NULL,
+  `value` BLOB NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
