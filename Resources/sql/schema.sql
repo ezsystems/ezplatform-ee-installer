@@ -105,7 +105,8 @@ CREATE TABLE `ezpage_map_attributes_blocks` (
 DROP TABLE IF EXISTS `ezpage_map_blocks_zones`;
 CREATE TABLE `ezpage_map_blocks_zones` (
   `block_id` int(11) NOT NULL,
-  `zone_id` int(11) NOT NULL
+  `zone_id` int(11) NOT NULL,
+  PRIMARY KEY (`block_id`, `zone_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_map_zones_pages`;
