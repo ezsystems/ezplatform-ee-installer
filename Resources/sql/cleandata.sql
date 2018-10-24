@@ -13,9 +13,11 @@ INSERT INTO `ezcontentclass_classgroup` VALUES (43,0,1,'Content');
 INSERT INTO `ezcontentclass_name` VALUES (42,0,2,'eng-GB','Landing page');
 INSERT INTO `ezcontentclass_name` VALUES (43,0,2,'eng-GB','Form');
 
+INSERT INTO `ezsection` VALUES (6,'form',NULL,'Form','ezcontentnavigationpart');
+
 INSERT INTO `ezcontentobject` VALUES (42,1,52,2,3,1442481743,'Home',14,1442481743,'34720ff636e1d4ce512f762dc638e4ac',1,1);
 INSERT INTO `ezcontentobject` VALUES (1,1,53,2,3,1486473151,'Form Uploads',14,1486473151,'6797ab09a3e84316f09c4ccabce90e2d',3,1);
-INSERT INTO `ezcontentobject` VALUES (1,1,54,2,2,1537166893,'Forms',14,1537166893,'9e863fbb0fb835ce050032b4f00de61d',1,1);
+INSERT INTO `ezcontentobject` VALUES (1,1,54,2,2,1537166893,'Forms',14,1537166893,'9e863fbb0fb835ce050032b4f00de61d',6,1);
 
 INSERT INTO `ezcontentobject_attribute` VALUES (0,185,52,NULL,NULL,'Home','ezstring',242,'eng-GB',3,0,'home',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,186,52,NULL,NULL,'Home Page','ezstring',243,'eng-GB',3,0,'home page',1);
@@ -59,8 +61,6 @@ INSERT INTO `ezsearch_word` VALUES (970,1,'uploads');
 INSERT INTO `ezsearch_word` VALUES (971,1,'folder');
 INSERT INTO `ezsearch_word` VALUES (972,1,'file');
 INSERT INTO `ezsearch_word` VALUES (1082,1,'forms');
-
-INSERT INTO `ezsection` VALUES (6,'form',NULL,'Form','ezcontentnavigationpart');
 
 INSERT INTO `ezurlalias_ml` VALUES ('eznode:54','eznode',0,38,0,1,3,38,19,'form-uploads','2c5f0c4eb6b8ba8d176b87665bdbe1af');
 INSERT INTO `ezurlalias_ml` VALUES ('eznode:55','eznode',0,39,0,1,2,39,0,'forms','ac68b62abfd6a9fe26e8ac4236c8ce0c');
