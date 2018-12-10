@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "ezsystems/ezpublish-kernel": "^7.3"
+    "ezsystems/ezpublish-kernel": "^7.4"
   },
   "autoload": {
     "psr-4": {
