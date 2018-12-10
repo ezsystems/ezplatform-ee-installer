@@ -193,3 +193,45 @@ CREATE TABLE `ezform_form_submission_data` (
   `value` BLOB NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Workflow
+--
+
+CREATE TABLE `ezeditorialworkflow_workflows` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `content_id` int(11) NOT NULL,
+  `version_no` int(11) NOT NULL,
+  `workflow_name` varchar(255) NOT NULL DEFAULT '',
+  `initial_owner_id` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_workflow_id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `ezeditorialworkflow_markings` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `workflow_id` int(11) unsigned NOT NULL,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `fk_workflow_id` (`workflow_id`),
+  CONSTRAINT `fk_workflow_id` FOREIGN KEY (`workflow_id`) REFERENCES `ezeditorialworkflow_workflows` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `ezeditorialworkflow_places` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `content_id` int(11) NOT NULL,
+  `version_no` int(11) NOT NULL,
+  `workflow_id` int(11) NOT NULL,
+  `place` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `ezeditorialworkflow_transitions` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `workflow_id` int(11) unsigned NOT NULL,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `timestamp` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `comment` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
