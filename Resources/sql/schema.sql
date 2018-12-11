@@ -198,6 +198,7 @@ CREATE TABLE `ezform_form_submission_data` (
 -- Workflow
 --
 
+DROP TABLE IF EXISTS `ezeditorialworkflow_workflows`;
 CREATE TABLE `ezeditorialworkflow_workflows` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `content_id` int(11) NOT NULL,
@@ -208,6 +209,7 @@ CREATE TABLE `ezeditorialworkflow_workflows` (
   KEY `idx_workflow_id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+DROP TABLE IF EXISTS `ezeditorialworkflow_markings`;
 CREATE TABLE `ezeditorialworkflow_markings` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `workflow_id` int(11) unsigned NOT NULL,
@@ -217,6 +219,7 @@ CREATE TABLE `ezeditorialworkflow_markings` (
   CONSTRAINT `fk_workflow_id` FOREIGN KEY (`workflow_id`) REFERENCES `ezeditorialworkflow_workflows` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+DROP TABLE IF EXISTS `ezeditorialworkflow_places`;
 CREATE TABLE `ezeditorialworkflow_places` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `content_id` int(11) NOT NULL,
@@ -226,6 +229,7 @@ CREATE TABLE `ezeditorialworkflow_places` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+DROP TABLE IF EXISTS `ezeditorialworkflow_transitions`;
 CREATE TABLE `ezeditorialworkflow_transitions` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `workflow_id` int(11) unsigned NOT NULL,
