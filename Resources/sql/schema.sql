@@ -209,7 +209,7 @@ CREATE TABLE `ezeditorialworkflow_workflows` (
   `version_no` int(11) NOT NULL,
   `workflow_name` varchar(255) NOT NULL DEFAULT '',
   `initial_owner_id` int(255) DEFAULT NULL,
-  `start_date` int(255) NOT NULL,
+  `start_date` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_workflow_id` (`id`),
   KEY `initial_owner_id` (`initial_owner_id`)
