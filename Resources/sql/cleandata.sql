@@ -64,9 +64,12 @@ INSERT INTO `ezsearch_word` VALUES (1082,1,'forms');
 
 INSERT INTO `ezurlalias_ml` VALUES ('eznode:54','eznode',0,38,0,1,3,38,19,'form-uploads','2c5f0c4eb6b8ba8d176b87665bdbe1af');
 INSERT INTO `ezurlalias_ml` VALUES ('eznode:55','eznode',0,39,0,1,2,39,0,'forms','ac68b62abfd6a9fe26e8ac4236c8ce0c');
+INSERT INTO `ezurlalias_ml` VALUES ('eznode:42','eznode',0,40,0,1,3,40,0,'ez-platform','76e323bf7efc1fad8935eb37bd557b92');
+
 
 INSERT INTO `ezurlalias_ml_incr` VALUES (38);
 INSERT INTO `ezurlalias_ml_incr` VALUES (39);
+INSERT INTO `ezurlalias_ml_incr` VALUES (40);
 
 UPDATE `ezcontentobject_tree` SET contentobject_id=52, contentobject_version=1, path_identification_string='', remote_id='f3e90596361e31d496d4026eb624c983' WHERE path_string='/1/2/';
 
