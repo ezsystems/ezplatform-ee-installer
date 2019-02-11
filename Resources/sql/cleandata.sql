@@ -77,8 +77,8 @@ INSERT INTO `ezcontentobject_tree` VALUES (1,1,1,2,0,0,42,1486473151,42,2,'home'
 INSERT INTO `ezcontentobject_tree` VALUES (53,1,1,3,0,0,54,1486473151,54,52,'media/files/form_uploads','/1/43/52/54/',0,'0543630fa051a1e2be54dbd32da2420f',1,1);
 INSERT INTO `ezcontentobject_tree` VALUES (54,1,1,2,0,0,55,1537166893,55,1,'forms','/1/55/',0,'1dad43be47e3a5c12cd06010aab65112',9,1);
 
-INSERT INTO `ezpolicy_limitation_value` VALUES (484,251,'3');
-INSERT INTO `ezpolicy_limitation_value` VALUES (485,251,'6');
+INSERT INTO `ezpolicy_limitation_value` VALUES (482,251,'3');
+INSERT INTO `ezpolicy_limitation_value` VALUES (483,251,'6');
 
 -- Page for Home
 
