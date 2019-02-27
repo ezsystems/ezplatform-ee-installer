@@ -15,9 +15,9 @@ INSERT INTO `ezcontentclass_name` VALUES (43,0,2,'eng-GB','Form');
 
 INSERT INTO `ezsection` VALUES (6,'form',NULL,'Form','ezcontentnavigationpart');
 
-INSERT INTO `ezcontentobject` VALUES (42,1,52,2,3,1442481743,'Home',14,1442481743,'34720ff636e1d4ce512f762dc638e4ac',1,1);
-INSERT INTO `ezcontentobject` VALUES (1,1,53,2,3,1486473151,'Form Uploads',14,1486473151,'6797ab09a3e84316f09c4ccabce90e2d',3,1);
-INSERT INTO `ezcontentobject` VALUES (1,1,54,2,2,1537166893,'Forms',14,1537166893,'9e863fbb0fb835ce050032b4f00de61d',6,1);
+INSERT INTO `ezcontentobject` VALUES (42,1,52,2,3,1442481743,'Home',14,1442481743,'34720ff636e1d4ce512f762dc638e4ac',1,1,0);
+INSERT INTO `ezcontentobject` VALUES (1,1,53,2,3,1486473151,'Form Uploads',14,1486473151,'6797ab09a3e84316f09c4ccabce90e2d',3,1,0);
+INSERT INTO `ezcontentobject` VALUES (1,1,54,2,2,1537166893,'Forms',14,1537166893,'9e863fbb0fb835ce050032b4f00de61d',6,1,0);
 
 INSERT INTO `ezcontentobject_attribute` VALUES (0,185,52,NULL,NULL,'Home','ezstring',242,'eng-GB',3,0,'home',1);
 INSERT INTO `ezcontentobject_attribute` VALUES (0,186,52,NULL,NULL,'Home Page','ezstring',243,'eng-GB',3,0,'home page',1);
