@@ -7,3 +7,9 @@ services:
         parent: ezplatform.installer.clean_installer
         tags:
             - {name: ezplatform.installer, type: ezplatform-ee-clean}
+
+    EzSystems\EzPlatformEnterpriseEditionInstallerBundle\Event\Subscriber\BuildSchemaSubscriber:
+        autoconfigure: true
+        public: false
+        arguments:
+            - '@=service("kernel").locateResource("@EzPlatformEnterpriseEditionInstallerBundle/Resources/config/storage/schema.yaml")'
