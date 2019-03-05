@@ -9,15 +9,10 @@ use EzSystems\PlatformInstallerBundle\Installer\CleanInstaller;
 
 class Installer extends CleanInstaller
 {
-    public function importSchema()
-    {
-        parent::importSchema();
-    }
-
     public function importData()
     {
         parent::importData();
         $databaseName = $this->db->getDatabasePlatform()->getName();
-        $this->runQueriesFromFile(__DIR__.'/../Resources/' . $databaseName .'/cleandata.sql');
+        $this->runQueriesFromFile(__DIR__.'/../Resources/sql/' . $databaseName .'/cleandata.sql');
     }
 }
