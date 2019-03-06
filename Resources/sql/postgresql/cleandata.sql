@@ -101,3 +101,22 @@ VALUES (1,1,52,'eng-GB','default');
 
 INSERT INTO "ezpage_zones" ("id", "name")
 VALUES (1,'default');
+
+SELECT SETVAL('ezdatebasedpublisher_scheduled_version_id_seq', COALESCE(MAX(id), 1)) FROM ezdatebasedpublisher_scheduled_version;
+SELECT SETVAL('ezeditorialworkflow_markings_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_markings;
+SELECT SETVAL('ezeditorialworkflow_transitions_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_transitions;
+SELECT SETVAL('ezeditorialworkflow_workflows_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_workflows;
+SELECT SETVAL('ezflexworkflow_id_seq', COALESCE(MAX(id), 1)) FROM ezflexworkflow;
+SELECT SETVAL('ezflexworkflow_message_id_seq', COALESCE(MAX(id), 1)) FROM ezflexworkflow_message;
+SELECT SETVAL('ezform_field_attributes_id_seq', COALESCE(MAX(id), 1)) FROM ezform_field_attributes;
+SELECT SETVAL('ezform_field_validators_id_seq', COALESCE(MAX(id), 1)) FROM ezform_field_validators;
+SELECT SETVAL('ezform_fields_id_seq', COALESCE(MAX(id), 1)) FROM ezform_fields;
+SELECT SETVAL('ezform_form_submission_data_id_seq', COALESCE(MAX(id), 1)) FROM ezform_form_submission_data;
+SELECT SETVAL('ezform_form_submissions_id_seq', COALESCE(MAX(id), 1)) FROM ezform_form_submissions;
+SELECT SETVAL('ezform_forms_id_seq', COALESCE(MAX(id), 1)) FROM ezform_forms;
+SELECT SETVAL('ezpage_attributes_id_seq', COALESCE(MAX(id), 1)) FROM ezpage_attributes;
+SELECT SETVAL('ezpage_blocks_id_seq', COALESCE(MAX(id), 1)) FROM ezpage_blocks;
+SELECT SETVAL('ezpage_blocks_design_id_seq', COALESCE(MAX(id), 1)) FROM ezpage_blocks_design;
+SELECT SETVAL('ezpage_blocks_visibility_id_seq', COALESCE(MAX(id), 1)) FROM ezpage_blocks_visibility;
+SELECT SETVAL('ezpage_pages_id_seq', COALESCE(MAX(id), 1)) FROM ezpage_pages;
+SELECT SETVAL('ezpage_zones_id_seq', COALESCE(MAX(id), 1)) FROM ezpage_zones;
