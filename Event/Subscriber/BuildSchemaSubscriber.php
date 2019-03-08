@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace EzSystems\EzPlatformEnterpriseEditionInstallerBundle\Event\Subscriber;
 
+use Doctrine\DBAL\Types\Type;
 use EzSystems\DoctrineSchema\API\Event\SchemaBuilderEvent;
 use EzSystems\DoctrineSchema\API\Event\SchemaBuilderEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -32,7 +33,10 @@ class BuildSchemaSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            SchemaBuilderEvents::BUILD_SCHEMA => ['onBuildSchema', 190],
+            SchemaBuilderEvents::BUILD_SCHEMA => [
+                ['onBuildSchema', 190],
+                ['changeFormBuilderSchema', 180],
+            ],
         ];
     }
 
@@ -44,5 +48,26 @@ class BuildSchemaSubscriber implements EventSubscriberInterface
         $event
             ->getSchemaBuilder()
             ->importSchemaFromFile($this->schemaFilePath);
+    }
+
+    /**
+     * @param \EzSystems\DoctrineSchema\API\Event\SchemaBuilderEvent $event
+     *
+     * @throws \Doctrine\DBAL\DBALException
+     * @throws \Doctrine\DBAL\Schema\SchemaException
+     */
+    public function changeFormBuilderSchema(SchemaBuilderEvent $event)
+    {
+        $schema = $event->getSchema();
+
+        $schema
+            ->getTable('ezform_field_validators')
+            ->getColumn('value')
+            ->setType(Type::getType(TYPE::TEXT));
+
+        $schema
+            ->getTable('ezform_field_attributes')
+            ->getColumn('value')
+            ->setType(Type::getType(TYPE::TEXT));
     }
 }
