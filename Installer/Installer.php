@@ -5,9 +5,9 @@
  */
 namespace EzSystems\EzPlatformEnterpriseEditionInstallerBundle\Installer;
 
-use EzSystems\PlatformInstallerBundle\Installer\CleanInstaller;
+use EzSystems\PlatformInstallerBundle\Installer\CoreInstaller;
 
-class Installer extends CleanInstaller
+class Installer extends CoreInstaller
 {
     public function importData()
     {
