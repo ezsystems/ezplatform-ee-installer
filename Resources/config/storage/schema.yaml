@@ -87,14 +87,14 @@ tables:
     fields:
       field_id: { type: integer, nullable: true }
       identifier: { type: string, nullable: true, length: 128 }
-      value: { type: blob, nullable: true, length: 65535 }
+      value: { type: text, nullable: true, length: 65535 }
   ezform_field_validators:
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
     fields:
       field_id: { type: integer, nullable: true }
       identifier: { type: string, nullable: true, length: 128 }
-      value: { type: blob, nullable: true, length: 65535 }
+      value: { type: text, nullable: true, length: 65535 }
   ezform_fields:
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
