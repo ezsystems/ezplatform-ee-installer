@@ -5,22 +5,14 @@
  */
 namespace EzSystems\EzPlatformEnterpriseEditionInstallerBundle\Installer;
 
-use EzSystems\PlatformInstallerBundle\Installer\CleanInstaller;
+use EzSystems\PlatformInstallerBundle\Installer\CoreInstaller;
 
-class Installer extends CleanInstaller
+class Installer extends CoreInstaller
 {
-
-    public function importSchema()
-    {
-        parent::importSchema();
-
-        $this->runQueriesFromFile(__DIR__.'/../Resources/sql/schema.sql');
-    }
-
     public function importData()
     {
         parent::importData();
-
-        $this->runQueriesFromFile(__DIR__.'/../Resources/sql/cleandata.sql');
+        $databaseName = $this->db->getDatabasePlatform()->getName();
+        $this->runQueriesFromFile(__DIR__.'/../Resources/sql/' . $databaseName .'/cleandata.sql');
     }
 }

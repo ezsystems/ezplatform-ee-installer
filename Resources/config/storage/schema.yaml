@@ -1,0 +1,181 @@
+tables:
+  ezdatebasedpublisher_scheduled_version:
+    uniqueConstraints:
+      content_id_version_number: { fields: [content_id, version_number] }
+    indexes:
+      content_id: { fields: [content_id] }
+      version_id: { fields: [version_id] }
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      content_id: { type: integer, nullable: false }
+      version_id: { type: integer, nullable: false }
+      version_number: { type: integer, nullable: false }
+      user_id: { type: integer, nullable: false }
+      publication_date: { type: integer, nullable: false }
+      url_root: { type: string, nullable: false, length: 255 }
+  ezeditorialworkflow_workflows:
+    indexes:
+      idx_workflow_id: { fields: [id] }
+      initial_owner_id: { fields: [initial_owner_id] }
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      content_id: { type: integer, nullable: false }
+      version_no: { type: integer, nullable: false }
+      workflow_name: { type: string, nullable: false, length: 255, options: { default: '' } }
+      initial_owner_id: { type: integer, nullable: true }
+      start_date: { type: integer, nullable: true }
+  ezeditorialworkflow_markings:
+    indexes:
+      fk_workflow_id_markings: { fields: [workflow_id] }
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      workflow_id: { type: integer, nullable: false }
+      name: { type: string, nullable: false, length: 255, options: { default: '' } }
+    foreignKeys:
+      fk_ezeditorialworkflow_markings_workflow_id: { fields: [workflow_id], foreignTable: ezeditorialworkflow_workflows, foreignFields: [id], options: { onDelete: CASCADE, onUpdate: null } }
+  ezeditorialworkflow_transitions:
+    indexes:
+      fk_workflow_id_transitions: { fields: [workflow_id] }
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      workflow_id: { type: integer, nullable: false }
+      name: { type: string, nullable: false, length: 255, options: { default: '' } }
+      timestamp: { type: integer, nullable: false }
+      user_id: { type: integer, nullable: true }
+      comment: { type: text, nullable: true, length: 65535 }
+    foreignKeys:
+      fk_ezeditorialworkflow_transitions_workflow_id: { fields: [workflow_id], foreignTable: ezeditorialworkflow_workflows, foreignFields: [id], options: { onDelete: CASCADE, onUpdate: null } }
+  ezflexworkflow:
+    indexes:
+      message_id: { fields: [message_id] }
+      content_owner_id: { fields: [content_owner_id] }
+      new_owner_id: { fields: [new_owner_id] }
+      ezflexworkflow_content_id: { fields: [content_id] }
+      previous_owner_id: { fields: [previous_owner_id] }
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      message_id: { type: integer, nullable: true }
+      content_id: { type: integer, nullable: false }
+      content_owner_id: { type: integer, nullable: false }
+      previous_owner_id: { type: integer, nullable: false }
+      new_owner_id: { type: integer, nullable: false }
+      status: { type: integer, nullable: false, options: { default: '0' } }
+      created: { type: integer, nullable: false }
+      version: { type: integer, nullable: false }
+      content_type_id: { type: integer, nullable: false }
+  ezflexworkflow_message:
+    indexes:
+      ezflexworkflow_message_content_id: { fields: [content_id] }
+      receiver_id: { fields: [receiver_id] }
+      sender_id: { fields: [sender_id] }
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      content_id: { type: integer, nullable: false }
+      message: { type: blob, nullable: true, length: 65535 }
+      sender_id: { type: integer, nullable: false }
+      receiver_id: { type: integer, nullable: false }
+      created: { type: integer, nullable: false }
+  ezform_field_attributes:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      field_id: { type: integer, nullable: true }
+      identifier: { type: string, nullable: true, length: 128 }
+      value: { type: text, nullable: true, length: 65535 }
+  ezform_field_validators:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      field_id: { type: integer, nullable: true }
+      identifier: { type: string, nullable: true, length: 128 }
+      value: { type: text, nullable: true, length: 65535 }
+  ezform_fields:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      form_id: { type: integer, nullable: true }
+      name: { type: string, nullable: false, length: 128 }
+      identifier: { type: string, nullable: true, length: 128 }
+  ezform_form_submission_data:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      form_submission_id: { type: integer, nullable: false }
+      name: { type: string, nullable: false, length: 128 }
+      identifier: { type: string, nullable: false, length: 128 }
+      value: { type: text, nullable: true, length: 65535 }
+  ezform_form_submissions:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      content_id: { type: integer, nullable: false }
+      language_code: { type: string, nullable: false, length: 6 }
+      user_id: { type: integer, nullable: false }
+      created: { type: integer, nullable: false }
+  ezform_forms:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      content_id: { type: integer, nullable: true }
+      version_no: { type: integer, nullable: true }
+      content_field_id: { type: integer, nullable: true }
+      language_code: { type: string, nullable: true, length: 16 }
+  ezpage_attributes:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      name: { type: string, nullable: false, length: 255, options: { default: '' } }
+      value: { type: text, nullable: true, length: 65535 }
+  ezpage_blocks:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      type: { type: string, nullable: false, length: 255, options: { default: '' } }
+      view: { type: string, nullable: false, length: 255, options: { default: '' } }
+      name: { type: string, nullable: false, length: 255, options: { default: '' } }
+  ezpage_blocks_design:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      block_id: { type: integer, nullable: false }
+      style: { type: text, nullable: true, length: 65535 }
+      compiled: { type: text, nullable: true, length: 65535 }
+      class: { type: string, nullable: true, length: 255 }
+  ezpage_blocks_visibility:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      block_id: { type: integer, nullable: false }
+      since: { type: integer, nullable: true }
+      till: { type: integer, nullable: true }
+  ezpage_map_attributes_blocks:
+    id:
+      attribute_id: { type: integer, nullable: false }
+      block_id: { type: integer, nullable: false }
+  ezpage_map_blocks_zones:
+    id:
+      block_id: { type: integer, nullable: false }
+      zone_id: { type: integer, nullable: false }
+  ezpage_map_zones_pages:
+    id:
+      zone_id: { type: integer, nullable: false }
+      page_id: { type: integer, nullable: false }
+  ezpage_pages:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      version_no: { type: integer, nullable: false }
+      content_id: { type: integer, nullable: false }
+      language_code: { type: string, nullable: false, length: 255, options: { default: '' } }
+      layout: { type: string, nullable: false, length: 255, options: { default: '' } }
+  ezpage_zones:
+    id:
+      id: { type: integer, nullable: false, options: { autoincrement: true } }
+    fields:
+      name: { type: string, nullable: false, length: 255, options: { default: '' } }
