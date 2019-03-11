@@ -109,7 +109,7 @@ tables:
       form_submission_id: { type: integer, nullable: false }
       name: { type: string, nullable: false, length: 128 }
       identifier: { type: string, nullable: false, length: 128 }
-      value: { type: blob, nullable: true, length: 65535 }
+      value: { type: text, nullable: true, length: 65535 }
   ezform_form_submissions:
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
