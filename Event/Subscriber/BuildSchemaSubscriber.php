@@ -27,7 +27,7 @@ class BuildSchemaSubscriber implements EventSubscriberInterface
     /**
      * Returns an array of events this subscriber wants to listen to.
      *
-     * @return string[]
+     * @return array
      */
     public static function getSubscribedEvents()
     {
