@@ -8,8 +8,10 @@
       "homepage": "https://github.com/ezsystems/ezplatform-ee-installer/graphs/contributors"
     }
   ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
-    "ezsystems/ezpublish-kernel": "^8.0"
+    "ezsystems/ezpublish-kernel": "^8.0@dev"
   },
   "autoload": {
     "psr-4": {
