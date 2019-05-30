@@ -3,7 +3,7 @@ parameters:
 
 services:
     ezstudio.installer.studio_installer:
-        class: %ezplatform.ee.installer.class%
+        class: '%ezplatform.ee.installer.class%'
         parent: ezplatform.installer.clean_installer
         tags:
             - {name: ezplatform.installer, type: ezplatform-ee-clean}
