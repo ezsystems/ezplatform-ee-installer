@@ -88,7 +88,7 @@ INSERT INTO `ezurlalias_ml_incr` VALUES (40);
 UPDATE `ezcontentobject_tree` SET contentobject_id=52, contentobject_version=1, path_identification_string='', remote_id='f3e90596361e31d496d4026eb624c983' WHERE path_string='/1/2/';
 
 INSERT INTO `ezcontentobject_tree` (`contentobject_id`, `contentobject_is_published`, `contentobject_version`, `depth`, `is_hidden`, `is_invisible`, `main_node_id`, `modified_subnode`, `node_id`, `parent_node_id`, `path_identification_string`, `path_string`, `priority`, `remote_id`, `sort_field`, `sort_order`) VALUES
-  (1,1,1,2,0,0,42,1486473151,42,2,'home','/1/2/42/',0,'581da01017b80b1afb1e5e2a3081c724',1,1),
+  (1,1,9,2,0,0,42,1486473151,42,2,'home','/1/2/42/',0,'581da01017b80b1afb1e5e2a3081c724',1,1),
   (53,1,1,3,0,0,54,1486473151,54,52,'media/files/form_uploads','/1/43/52/54/',0,'0543630fa051a1e2be54dbd32da2420f',1,1),
   (54,1,1,1,0,0,55,1537166893,55,1,'forms','/1/55/',0,'1dad43be47e3a5c12cd06010aab65112',9,1);
 
