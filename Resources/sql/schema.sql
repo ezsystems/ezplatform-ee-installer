@@ -99,21 +99,27 @@ DROP TABLE IF EXISTS `ezpage_map_attributes_blocks`;
 CREATE TABLE `ezpage_map_attributes_blocks` (
   `attribute_id` int(11) NOT NULL,
   `block_id` int(11) NOT NULL,
-  PRIMARY KEY (`attribute_id`,`block_id`)
+  PRIMARY KEY (`attribute_id`,`block_id`),
+  KEY `ezpage_map_attributes_attribute_id` (`attribute_id`),
+  KEY `ezpage_map_attributes_block_id` (`block_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_map_blocks_zones`;
 CREATE TABLE `ezpage_map_blocks_zones` (
   `block_id` int(11) NOT NULL,
   `zone_id` int(11) NOT NULL,
-  PRIMARY KEY (`block_id`, `zone_id`)
+  PRIMARY KEY (`block_id`, `zone_id`),
+  KEY `ezpage_map_blocks_block_id` (`block_id`),
+  KEY `ezpage_map_blocks_zones_id` (`zone_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_map_zones_pages`;
 CREATE TABLE `ezpage_map_zones_pages` (
   `zone_id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
-  PRIMARY KEY (`zone_id`,`page_id`)
+  PRIMARY KEY (`zone_id`,`page_id`),
+  KEY `ezpage_map_zones_pages_zone_id` (`zone_id`),
+  KEY `ezpage_map_zones_pages_page_id` (`page_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_pages`;
