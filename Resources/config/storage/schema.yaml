@@ -155,14 +155,23 @@ tables:
       since: { type: integer, nullable: true }
       till: { type: integer, nullable: true }
   ezpage_map_attributes_blocks:
+    indexes:
+      ezpage_map_attributes_attribute_id: { fields: [attribute_id] }
+      ezpage_map_attributes_block_id: { fields: [block_id] }
     id:
       attribute_id: { type: integer, nullable: false }
       block_id: { type: integer, nullable: false }
   ezpage_map_blocks_zones:
+    indexes:
+      ezpage_map_blocks_zones_block_id: { fields: [block_id] }
+      ezpage_map_blocks_zones_zone_id: { fields: [zone_id] }
     id:
       block_id: { type: integer, nullable: false }
       zone_id: { type: integer, nullable: false }
   ezpage_map_zones_pages:
+    indexes:
+      ezpage_map_zones_pages_zone_id: { fields: [zone_id] }
+      ezpage_map_zones_pages_page_id: { fields: [page_id] }
     id:
       zone_id: { type: integer, nullable: false }
       page_id: { type: integer, nullable: false }
