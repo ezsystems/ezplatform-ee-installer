@@ -156,8 +156,8 @@ tables:
       till: { type: integer, nullable: true }
   ezpage_map_attributes_blocks:
     indexes:
-      ezpage_map_attributes_attribute_id: { fields: [attribute_id] }
-      ezpage_map_attributes_block_id: { fields: [block_id] }
+      ezpage_map_attributes_blocks_attribute_id: { fields: [attribute_id] }
+      ezpage_map_attributes_blocks_block_id: { fields: [block_id] }
     id:
       attribute_id: { type: integer, nullable: false }
       block_id: { type: integer, nullable: false }
