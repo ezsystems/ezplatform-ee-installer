@@ -140,6 +140,8 @@ tables:
       view: { type: string, nullable: false, length: 255, options: { default: '' } }
       name: { type: string, nullable: false, length: 255, options: { default: '' } }
   ezpage_blocks_design:
+    indexes:
+      ezpage_blocks_design_block_id: { fields: [block_id] }
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
     fields:
@@ -148,6 +150,8 @@ tables:
       compiled: { type: text, nullable: true, length: 65535 }
       class: { type: string, nullable: true, length: 255 }
   ezpage_blocks_visibility:
+    indexes:
+      ezpage_blocks_visibility_block_id: { fields: [block_id] }
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
     fields:
@@ -176,6 +180,8 @@ tables:
       zone_id: { type: integer, nullable: false }
       page_id: { type: integer, nullable: false }
   ezpage_pages:
+    indexes:
+      ezpage_pages_content_id_version_no: { fields: [content_id, version_no] }
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
     fields:
