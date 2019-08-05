@@ -83,7 +83,8 @@ CREATE TABLE `ezpage_blocks_design` (
   `style` TEXT DEFAULT NULL,
   `compiled` TEXT DEFAULT NULL,
   `class` VARCHAR(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `ezpage_blocks_design_block_id` (`block_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_blocks_visibility`;
@@ -92,7 +93,8 @@ CREATE TABLE `ezpage_blocks_visibility` (
   `block_id` INT(11) NOT NULL,
   `since` INT(11) DEFAULT NULL,
   `till` INT(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `ezpage_blocks_visibility_block_id` (`block_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_map_attributes_blocks`;
@@ -129,7 +131,8 @@ CREATE TABLE `ezpage_pages` (
   `content_id` int(11) NOT NULL,
   `language_code` varchar(255) NOT NULL DEFAULT '',
   `layout` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `ezpage_pages_content_id_version_no` (`content_id`, `version_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_zones`;
