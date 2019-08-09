@@ -12,9 +12,6 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ez_systems_ezplatform_ee_installer');
-
-        return $treeBuilder;
+        return new TreeBuilder('ez_systems_ezplatform_ee_installer');
     }
 }
