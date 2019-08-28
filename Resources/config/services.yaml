@@ -1,10 +1,6 @@
-parameters:
-    ezplatform.ee.installer.class: EzSystems\EzPlatformEnterpriseEditionInstallerBundle\Installer\Installer
-
 services:
-    ezstudio.installer.studio_installer:
-        class: '%ezplatform.ee.installer.class%'
-        parent: ezplatform.installer.clean_installer
+    EzSystems\EzPlatformEnterpriseEditionInstallerBundle\Installer\Installer:
+        parent: EzSystems\PlatformInstallerBundle\Installer\CoreInstaller
         tags:
             - {name: ezplatform.installer, type: ezplatform-ee-clean}
 
