@@ -14,41 +14,6 @@ tables:
       user_id: { type: integer, nullable: false }
       publication_date: { type: integer, nullable: false }
       url_root: { type: string, nullable: false, length: 255 }
-  ezeditorialworkflow_workflows:
-    indexes:
-      idx_workflow_id: { fields: [id] }
-      initial_owner_id: { fields: [initial_owner_id] }
-    id:
-      id: { type: integer, nullable: false, options: { autoincrement: true } }
-    fields:
-      content_id: { type: integer, nullable: false }
-      version_no: { type: integer, nullable: false }
-      workflow_name: { type: string, nullable: false, length: 255, options: { default: '' } }
-      initial_owner_id: { type: integer, nullable: true }
-      start_date: { type: integer, nullable: true }
-  ezeditorialworkflow_markings:
-    indexes:
-      fk_workflow_id_markings: { fields: [workflow_id] }
-    id:
-      id: { type: integer, nullable: false, options: { autoincrement: true } }
-    fields:
-      workflow_id: { type: integer, nullable: false }
-      name: { type: string, nullable: false, length: 255, options: { default: '' } }
-    foreignKeys:
-      fk_ezeditorialworkflow_markings_workflow_id: { fields: [workflow_id], foreignTable: ezeditorialworkflow_workflows, foreignFields: [id], options: { onDelete: CASCADE, onUpdate: null } }
-  ezeditorialworkflow_transitions:
-    indexes:
-      fk_workflow_id_transitions: { fields: [workflow_id] }
-    id:
-      id: { type: integer, nullable: false, options: { autoincrement: true } }
-    fields:
-      workflow_id: { type: integer, nullable: false }
-      name: { type: string, nullable: false, length: 255, options: { default: '' } }
-      timestamp: { type: integer, nullable: false }
-      user_id: { type: integer, nullable: true }
-      comment: { type: text, nullable: true, length: 65535 }
-    foreignKeys:
-      fk_ezeditorialworkflow_transitions_workflow_id: { fields: [workflow_id], foreignTable: ezeditorialworkflow_workflows, foreignFields: [id], options: { onDelete: CASCADE, onUpdate: null } }
   ezflexworkflow:
     indexes:
       message_id: { fields: [message_id] }
