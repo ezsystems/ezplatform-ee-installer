@@ -14,38 +14,6 @@ tables:
       user_id: { type: integer, nullable: false }
       publication_date: { type: integer, nullable: false }
       url_root: { type: string, nullable: false, length: 255 }
-  ezflexworkflow:
-    indexes:
-      message_id: { fields: [message_id] }
-      content_owner_id: { fields: [content_owner_id] }
-      new_owner_id: { fields: [new_owner_id] }
-      ezflexworkflow_content_id: { fields: [content_id] }
-      previous_owner_id: { fields: [previous_owner_id] }
-    id:
-      id: { type: integer, nullable: false, options: { autoincrement: true } }
-    fields:
-      message_id: { type: integer, nullable: true }
-      content_id: { type: integer, nullable: false }
-      content_owner_id: { type: integer, nullable: false }
-      previous_owner_id: { type: integer, nullable: false }
-      new_owner_id: { type: integer, nullable: false }
-      status: { type: integer, nullable: false, options: { default: '0' } }
-      created: { type: integer, nullable: false }
-      version: { type: integer, nullable: false }
-      content_type_id: { type: integer, nullable: false }
-  ezflexworkflow_message:
-    indexes:
-      ezflexworkflow_message_content_id: { fields: [content_id] }
-      receiver_id: { fields: [receiver_id] }
-      sender_id: { fields: [sender_id] }
-    id:
-      id: { type: integer, nullable: false, options: { autoincrement: true } }
-    fields:
-      content_id: { type: integer, nullable: false }
-      message: { type: blob, nullable: true, length: 65535 }
-      sender_id: { type: integer, nullable: false }
-      receiver_id: { type: integer, nullable: false }
-      created: { type: integer, nullable: false }
   ezform_field_attributes:
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }

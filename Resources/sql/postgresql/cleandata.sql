@@ -106,8 +106,6 @@ SELECT SETVAL('ezdatebasedpublisher_scheduled_version_id_seq', COALESCE(MAX(id),
 SELECT SETVAL('ezeditorialworkflow_markings_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_markings;
 SELECT SETVAL('ezeditorialworkflow_transitions_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_transitions;
 SELECT SETVAL('ezeditorialworkflow_workflows_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_workflows;
-SELECT SETVAL('ezflexworkflow_id_seq', COALESCE(MAX(id), 1)) FROM ezflexworkflow;
-SELECT SETVAL('ezflexworkflow_message_id_seq', COALESCE(MAX(id), 1)) FROM ezflexworkflow_message;
 SELECT SETVAL('ezform_field_attributes_id_seq', COALESCE(MAX(id), 1)) FROM ezform_field_attributes;
 SELECT SETVAL('ezform_field_validators_id_seq', COALESCE(MAX(id), 1)) FROM ezform_field_validators;
 SELECT SETVAL('ezform_fields_id_seq', COALESCE(MAX(id), 1)) FROM ezform_fields;
