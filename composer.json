@@ -12,11 +12,12 @@
   "prefer-stable": true,
   "require": {
     "php": "^7.3",
-    "ezsystems/ezpublish-kernel": "^8.0@dev",
-    "symfony/http-kernel": "^4.3",
-    "symfony/config": "^4.3",
-    "symfony/dependency-injection": "^4.3",
-    "symfony/event-dispatcher": "^4.3"
+    "php": "^7.3",
+    "ezsystems/ezpublish-kernel": "dev-symfony5 as 8.0.x-dev",
+    "symfony/http-kernel": "^5.0",
+    "symfony/config": "^5.0",
+    "symfony/dependency-injection": "^5.0",
+    "symfony/event-dispatcher": "^5.0"
   },
   "autoload": {
     "psr-4": {
