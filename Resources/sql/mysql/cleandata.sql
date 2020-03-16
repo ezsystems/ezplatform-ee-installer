@@ -57,24 +57,6 @@ INSERT INTO `eznode_assignment` (`contentobject_id`, `contentobject_version`, `f
   (53,1,0,40,1,2,52,'0543630fa051a1e2be54dbd32da2420f','0',1,1,0,0),
   (54,1,0,41,1,2,2,'1dad43be47e3a5c12cd06010aab65112','0',9,1,0,0);
 
-INSERT INTO `ezsearch_object_word_link` (`contentclass_attribute_id`, `contentclass_id`, `contentobject_id`, `frequency`, `id`, `identifier`, `integer_value`, `next_word_id`, `placement`, `prev_word_id`, `published`, `section_id`, `word_id`) VALUES
-  (4,1,53,0,4699,'name',0,970,0,0,1486473151,3,969),
-  (4,1,53,0,4700,'name',0,969,1,969,1486473151,3,970),
-  (155,1,53,0,4701,'short_name',0,970,2,970,1486473151,3,969),
-  (155,1,53,0,4702,'short_name',0,971,3,969,1486473151,3,970),
-  (119,1,53,0,4703,'short_description',0,816,4,970,1486473151,3,971),
-  (119,1,53,0,4704,'short_description',0,972,5,971,1486473151,3,816),
-  (119,1,53,0,4705,'short_description',0,970,6,816,1486473151,3,972),
-  (119,1,53,0,4706,'short_description',0,0,7,972,1486473151,3,970),
-  (4,1,54,0,4899,'name',0,0,0,0,1537166893,1,1082);
-
-INSERT INTO `ezsearch_word` (`id`, `object_count`, `word`) VALUES
-  (969,1,'form'),
-  (970,1,'uploads'),
-  (971,1,'folder'),
-  (972,1,'file'),
-  (1082,1,'forms');
-
 INSERT INTO `ezurlalias_ml` (`action`, `action_type`, `alias_redirects`, `id`, `is_alias`, `is_original`, `lang_mask`, `link`, `parent`, `text`, `text_md5`) VALUES
   ('eznode:54','eznode',0,38,0,1,3,38,19,'form-uploads','2c5f0c4eb6b8ba8d176b87665bdbe1af'),
   ('eznode:55','eznode',0,39,0,1,2,39,0,'forms','ac68b62abfd6a9fe26e8ac4236c8ce0c'),
