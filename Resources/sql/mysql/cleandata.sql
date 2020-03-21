@@ -81,7 +81,7 @@ INSERT INTO `ezpolicy_limitation_value` (`id`, `limitation_id`, `value`) VALUES
 -- Page for Home
 
 INSERT INTO `ezpage_attributes` (`id`, `name`, `value`)
-VALUES (1,'content','<h1>eZ Studio</h1> <p>This is the clean install coming with eZ Studio. Now you can start creating your own design.</p>');
+VALUES (1,'content','<h1>eZ Platform Enterprise Edition</h1> <p>This is the clean install coming with eZ Platform Enterprise Edition. Now you can start creating your own design.</p>');
 
 INSERT INTO `ezpage_blocks` (`id`, `type`, `view`, `name`)
 VALUES (1,'tag','default','Tag');
