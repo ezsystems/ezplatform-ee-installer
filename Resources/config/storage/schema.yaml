@@ -1,7 +1,7 @@
 tables:
   ezdatebasedpublisher_scheduled_version:
     uniqueConstraints:
-      content_id_version_number: { fields: [content_id, version_number] }
+      content_id_version_number_action: { fields: [content_id, version_number, action] }
     indexes:
       content_id: { fields: [content_id] }
       version_id: { fields: [version_id] }
