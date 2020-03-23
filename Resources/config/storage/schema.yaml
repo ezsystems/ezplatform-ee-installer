@@ -12,7 +12,7 @@ tables:
       version_id: { type: integer, nullable: false }
       version_number: { type: integer, nullable: false }
       user_id: { type: integer, nullable: false }
-      date: { type: integer, nullable: false }
+      action_timestamp: { type: integer, nullable: false }
       action: { type: string, nullable: false, length: 32 }
       url_root: { type: string, nullable: false, length: 255 }
   ezform_field_attributes:
