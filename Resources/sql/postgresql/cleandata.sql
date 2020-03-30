@@ -66,7 +66,7 @@ INSERT INTO "ezpolicy_limitation_value" ("id", "limitation_id", "value") VALUES 
 -- Page for Home
 
 INSERT INTO "ezpage_attributes" ("id", "name", "value")
-VALUES (1,'content',E'<p>This is the clean installation coming with eZ Platform Enterprise Edition. It''s a barebones setup of the platform, an excellent foundation to build upon if you want to start your project from scratch.</p>');
+VALUES (1,'content',E'<p>This is the clean installation coming with eZ Platform Enterprise Edition. It''s a bare-bones setup of the Platform, an excellent foundation to build upon if you want to start your project from scratch.</p>');
 
 INSERT INTO "ezpage_blocks" ("id", "type", "view", "name")
 VALUES (1,'tag','default','Tag');
