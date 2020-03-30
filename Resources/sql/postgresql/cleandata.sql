@@ -19,8 +19,8 @@ INSERT INTO "ezcontentobject" ("contentclass_id", "current_version", "id", "init
 INSERT INTO "ezcontentobject" ("contentclass_id", "current_version", "id", "initial_language_id", "language_mask", "modified", "name", "owner_id", "published", "remote_id", "section_id", "status", "is_hidden") VALUES (1,1,53,2,3,1486473151,'Form Uploads',14,1486473151,'6797ab09a3e84316f09c4ccabce90e2d',3,1,false);
 INSERT INTO "ezcontentobject" ("contentclass_id", "current_version", "id", "initial_language_id", "language_mask", "modified", "name", "owner_id", "published", "remote_id", "section_id", "status", "is_hidden") VALUES (1,1,54,2,2,1537166893,'Forms',14,1537166893,'9e863fbb0fb835ce050032b4f00de61d',6,1,false);
 
-INSERT INTO "ezcontentobject_attribute" ("attribute_original_id", "contentclassattribute_id", "contentobject_id", "data_float", "data_int", "data_text", "data_type_string", "id", "language_code", "language_id", "sort_key_int", "sort_key_string", "version") VALUES (0,185,52,NULL,NULL,'Home','ezstring',242,'eng-GB',3,0,'home',1);
-INSERT INTO "ezcontentobject_attribute" ("attribute_original_id", "contentclassattribute_id", "contentobject_id", "data_float", "data_int", "data_text", "data_type_string", "id", "language_code", "language_id", "sort_key_int", "sort_key_string", "version") VALUES (0,186,52,NULL,NULL,'Home Page','ezstring',243,'eng-GB',3,0,'home page',1);
+INSERT INTO "ezcontentobject_attribute" ("attribute_original_id", "contentclassattribute_id", "contentobject_id", "data_float", "data_int", "data_text", "data_type_string", "id", "language_code", "language_id", "sort_key_int", "sort_key_string", "version") VALUES (0,185,52,NULL,NULL,'Welcome to eZ Platform Enterprise Edition','ezstring',242,'eng-GB',3,0,'welcome to ez platform enterprise edition',1);
+INSERT INTO "ezcontentobject_attribute" ("attribute_original_id", "contentclassattribute_id", "contentobject_id", "data_float", "data_int", "data_text", "data_type_string", "id", "language_code", "language_id", "sort_key_int", "sort_key_string", "version") VALUES (0,186,52,NULL,NULL,'You are now ready to start your project.','ezstring',243,'eng-GB',3,0,'you are now ready to start your project.',1);
 INSERT INTO "ezcontentobject_attribute" ("attribute_original_id", "contentclassattribute_id", "contentobject_id", "data_float", "data_int", "data_text", "data_type_string", "id", "language_code", "language_id", "sort_key_int", "sort_key_string", "version") VALUES (0,187,52,NULL,NULL,NULL,'ezlandingpage',244,'eng-GB',3,0,'home page',1);
 INSERT INTO "ezcontentobject_attribute" ("attribute_original_id", "contentclassattribute_id", "contentobject_id", "data_float", "data_int", "data_text", "data_type_string", "id", "language_code", "language_id", "sort_key_int", "sort_key_string", "version") VALUES (0,4,53,NULL,NULL,'Form Uploads','ezstring',245,'eng-GB',3,0,'form uploads',1);
 INSERT INTO "ezcontentobject_attribute" ("attribute_original_id", "contentclassattribute_id", "contentobject_id", "data_float", "data_int", "data_text", "data_type_string", "id", "language_code", "language_id", "sort_key_int", "sort_key_string", "version") VALUES (0,155,53,NULL,NULL,'form uploads','ezstring',246,'eng-GB',3,0,'form uploads',1);
@@ -66,7 +66,7 @@ INSERT INTO "ezpolicy_limitation_value" ("id", "limitation_id", "value") VALUES 
 -- Page for Home
 
 INSERT INTO "ezpage_attributes" ("id", "name", "value")
-VALUES (1,'content',E'<h1>eZ Platform Enterprise Edition</h1> <p>This is the clean install coming with eZ Platform Enterprise Edition. Now you can start creating your own design.</p>');
+VALUES (1,'content',E'<p>This is the clean installation coming with eZ Platform Enterprise Edition. It''s a bare-bones setup of the Platform, an excellent foundation to build upon if you want to start your project from scratch.</p>');
 
 INSERT INTO "ezpage_blocks" ("id", "type", "view", "name")
 VALUES (1,'tag','default','Tag');
