@@ -86,7 +86,7 @@ VALUES (1,1,52,'eng-GB','default');
 INSERT INTO "ezpage_zones" ("id", "name")
 VALUES (1,'default');
 
-SELECT SETVAL('ezdatebasedpublisher_scheduled_version_id_seq', COALESCE(MAX(id), 1)) FROM ezdatebasedpublisher_scheduled_version;
+SELECT SETVAL('ezdatebasedpublisher_scheduled_entries_id_seq', COALESCE(MAX(id), 1)) FROM ezdatebasedpublisher_scheduled_entries;
 SELECT SETVAL('ezeditorialworkflow_markings_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_markings;
 SELECT SETVAL('ezeditorialworkflow_transitions_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_transitions;
 SELECT SETVAL('ezeditorialworkflow_workflows_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_workflows;
