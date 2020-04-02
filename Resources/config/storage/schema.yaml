@@ -1,5 +1,5 @@
 tables:
-  ezdatebasedpublisher_scheduled_version:
+  ezdatebasedpublisher_scheduled_entries:
     uniqueConstraints:
       content_id_version_number_action: { fields: [content_id, version_number, action] }
     indexes:
@@ -9,8 +9,8 @@ tables:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
     fields:
       content_id: { type: integer, nullable: false }
-      version_id: { type: integer, nullable: false }
-      version_number: { type: integer, nullable: false }
+      version_id: { type: integer, nullable: true }
+      version_number: { type: integer, nullable: true }
       user_id: { type: integer, nullable: false }
       action_timestamp: { type: integer, nullable: false }
       action: { type: string, nullable: false, length: 32 }
