@@ -21,14 +21,14 @@ INSERT INTO `ezsection` (`id`, `identifier`, `locale`, `name`, `navigation_part_
   (6,'form',NULL,'Form','ezcontentnavigationpart');
 
 INSERT INTO `ezcontentobject` (`contentclass_id`, `current_version`, `id`, `initial_language_id`, `language_mask`, `modified`, `name`, `owner_id`, `published`, `remote_id`, `section_id`, `status`,`is_hidden`) VALUES
-  (42,1,52,2,3,1442481743,'Home',14,1442481743,'34720ff636e1d4ce512f762dc638e4ac',1,1,false),
+  (42,1,52,2,3,1442481743,'Welcome to eZ Platform Enterprise Edition',14,1442481743,'34720ff636e1d4ce512f762dc638e4ac',1,1,false),
   (1,1,53,2,3,1486473151,'Form Uploads',14,1486473151,'6797ab09a3e84316f09c4ccabce90e2d',3,1,false),
   (1,1,54,2,2,1537166893,'Forms',14,1537166893,'9e863fbb0fb835ce050032b4f00de61d',6,1,false);
 
 INSERT INTO `ezcontentobject_attribute` (`attribute_original_id`, `contentclassattribute_id`, `contentobject_id`, `data_float`, `data_int`, `data_text`, `data_type_string`, `id`, `language_code`, `language_id`, `sort_key_int`, `sort_key_string`, `version`) VALUES
   (0,185,52,NULL,NULL,'Welcome to eZ Platform Enterprise Edition','ezstring',242,'eng-GB',3,0,'welcome to ez platform enterprise edition',1),
   (0,186,52,NULL,NULL,'You are now ready to start your project.','ezstring',243,'eng-GB',3,0,'you are now ready to start your project.',1),
-  (0,187,52,NULL,NULL,NULL,'ezlandingpage',244,'eng-GB',3,0,'home page',1),
+  (0,187,52,NULL,NULL,NULL,'ezlandingpage',244,'eng-GB',3,0,'welcome to ez platform enterprise edition',1),
   (0,4,53,NULL,NULL,'Form Uploads','ezstring',245,'eng-GB',3,0,'form uploads',1),
   (0,155,53,NULL,NULL,'form uploads','ezstring',246,'eng-GB',3,0,'form uploads',1),
   (0,119,53,NULL,NULL,'<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Folder for file uploads</para></section>\n','ezrichtext',247,'eng-GB',3,0,'',1),
@@ -39,7 +39,7 @@ INSERT INTO `ezcontentobject_attribute` (`attribute_original_id`, `contentclassa
   (0,4,54,NULL,NULL,'Forms','ezstring',249,'eng-GB',2,0,'forms',1);
 
 INSERT INTO `ezcontentobject_name` (`content_translation`, `content_version`, `contentobject_id`, `language_id`, `name`, `real_translation`) VALUES
-  ('eng-GB',1,52,2,'Home','eng-GB'),
+  ('eng-GB',1,52,2,'Welcome to eZ Platform Enterprise Edition','eng-GB'),
   ('eng-GB',1,53,2,'Form Uploads','eng-GB'),
   ('eng-GB',1,54,3,'Forms','eng-GB');
 
