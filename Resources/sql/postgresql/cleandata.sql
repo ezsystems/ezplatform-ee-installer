@@ -100,7 +100,7 @@ INSERT INTO "ezpage_zones" ("id", "name")
 VALUES (1,'default');
 
 INSERT INTO "ibexa_setting" ("group", "identifier", "value")
-VALUES ('personalization', 'installation_key', '');
+VALUES ('personalization', 'installation_key', '""');
 
 SELECT SETVAL('ezdatebasedpublisher_scheduled_entries_id_seq', COALESCE(MAX(id), 1)) FROM ezdatebasedpublisher_scheduled_entries;
 SELECT SETVAL('ezeditorialworkflow_markings_id_seq', COALESCE(MAX(id), 1)) FROM ezeditorialworkflow_markings;
