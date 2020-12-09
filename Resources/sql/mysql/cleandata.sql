@@ -113,3 +113,6 @@ VALUES (1,1,52,'eng-GB','default');
 
 INSERT INTO `ezpage_zones` (`id`, `name`)
 VALUES (1,'default');
+
+INSERT INTO `ibexa_setting` (`group`, `identifier`, `value`)
+VALUES ('personalization', 'installation_key', '');
