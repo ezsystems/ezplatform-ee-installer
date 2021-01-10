@@ -1,11 +1,11 @@
 {
   "name": "ezsystems/ezplatform-ee-installer",
-  "description": "Installer for eZ Platform Enterprise Edition",
+  "description": "Installer for Ibexa DXP",
   "license": "proprietary",
   "authors": [
     {
-      "name": "eZ Platform dev-team",
-      "homepage": "https://github.com/ezsystems/ezplatform-ee-installer/graphs/contributors"
+      "name": "Ibexa AS",
+      "homepage": "https://ibexa.co"
     }
   ],
   "require": {
