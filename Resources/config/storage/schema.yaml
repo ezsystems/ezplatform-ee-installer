@@ -131,7 +131,7 @@ tables:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
     fields:
       name: { type: string, nullable: false, length: 255, options: { default: '' } }
-      value: { type: text, nullable: true, length: 65535 }
+      value: { type: text, nullable: true, length: 4294967295 }
   ezpage_blocks:
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
