@@ -18,6 +18,8 @@ tables:
     indexes:
       idx_workflow_id: { fields: [id] }
       initial_owner_id: { fields: [initial_owner_id] }
+      idx_workflow_co_id_ver: { fields: [content_id, version_no] }
+      idx_workflow_name: { fields: [workflow_name] }
     id:
       id: { type: integer, nullable: false, options: { autoincrement: true } }
     fields:
