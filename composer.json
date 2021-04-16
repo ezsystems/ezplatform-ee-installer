@@ -10,14 +10,14 @@
   ],
   "require": {
     "php": "^7.3",
-    "ezsystems/ezplatform-kernel": "~1.2.0@dev",
+    "ezsystems/ezplatform-kernel": "~1.2.0",
     "symfony/http-kernel": "^5.0",
     "symfony/config": "^5.0",
     "symfony/dependency-injection": "^5.0",
     "symfony/event-dispatcher": "^5.0"
   },
   "require-dev": {
-    "ezsystems/doctrine-dbal-schema": "^1.0@dev"
+    "ezsystems/doctrine-dbal-schema": "^1.0"
   },
   "autoload": {
     "psr-4": {
