@@ -1,24 +1,24 @@
 {
-  "name": "ezsystems/ezplatform-ee-installer",
-  "description": "Installer for eZ Platform Enterprise Edition",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "eZ Platform dev-team",
-      "homepage": "https://github.com/ezsystems/ezplatform-ee-installer/graphs/contributors"
+    "name": "ezsystems/ezplatform-ee-installer",
+    "description": "Installer for eZ Platform Enterprise Edition",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "eZ Platform dev-team",
+            "homepage": "https://github.com/ezsystems/ezplatform-ee-installer/graphs/contributors"
+        }
+    ],
+    "require": {
+        "ezsystems/ezpublish-kernel": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "EzSystems\\EzPlatformEnterpriseEditionInstallerBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.5.x-dev"
+        }
     }
-  ],
-  "require": {
-    "ezsystems/ezpublish-kernel": "^7.5"
-  },
-  "autoload": {
-    "psr-4": {
-      "EzSystems\\EzPlatformEnterpriseEditionInstallerBundle\\": ""
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.5.x-dev"
-    }
-  }
 }
